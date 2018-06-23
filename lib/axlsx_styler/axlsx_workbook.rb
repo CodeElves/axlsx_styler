@@ -18,7 +18,7 @@ module AxlsxStyler
 
       def apply_styles
         return unless styled_cells
-  
+
         styled_cells.each do |cell|
           if styles.style_index && styles.style_index[cell.style]
             current_style = styles.style_index[cell.style]

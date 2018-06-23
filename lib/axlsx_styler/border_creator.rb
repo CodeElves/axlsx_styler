@@ -34,9 +34,8 @@ class BorderCreator
 
   def add_border(position, width, color)
     style = {
-      border: {
-        style: width, color: color, edges: [position.to_sym]
-      }
+      border: { style: :thin, color: color },
+      "border_#{position}".to_sym => { style: width, color: color }
     }
     worksheet.add_style border_cells[position.to_sym], style
   end
